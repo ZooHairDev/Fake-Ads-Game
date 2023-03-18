@@ -1,0 +1,654 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Water.shader" type="Shader" id=1]
+[ext_resource path="res://Scripts/Lvl4.gd" type="Script" id=2]
+[ext_resource path="res://Pin.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/font_lvl_titles.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Materials/Water_Material.tres" type="Material" id=5]
+[ext_resource path="res://pin_head.png" type="Texture" id=6]
+[ext_resource path="res://pin_body.png" type="Texture" id=7]
+[ext_resource path="res://Lava_preset.tres" type="Texture" id=8]
+[ext_resource path="res://Prefabs/Cointest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/WaterMolecule.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Lvl/CoinCounter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Lvl/CoinDestroyer.tscn" type="PackedScene" id=14]
+[ext_resource path="res://BG.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/LavaMolecule.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/SpeedRunCounter.tscn" type="PackedScene" id=17]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = ExtResource( 8 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.261719, 0.261719, 0.261719, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = SubResource( 3 )
+
+[sub_resource type="PhysicsMaterial" id=5]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 68.3582
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 116.512, 12.1497 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 287.724, 12.1497 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 56, 12.1497 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 833.433, 767.348 )
+
+[node name="WaterLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterMolecule237" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule239" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule241" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule243" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule245" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule247" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule249" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule251" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule253" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule255" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule257" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule259" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule248" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule250" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule252" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule254" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule256" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule258" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule260" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule261" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule262" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule263" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule264" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule265" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule266" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule267" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule268" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule269" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="WaterMolecule270" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1023, 130 )
+
+[node name="LavaLayer" type="CanvasLayer" parent="."]
+
+[node name="LavaMolecule" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule2" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule3" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule4" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule5" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule6" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 490 )
+
+[node name="LavaMolecule7" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 833.433, 458 )
+
+[node name="LavaMolecule8" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 458 )
+
+[node name="LavaMolecule9" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 855, 439.037 )
+
+[node name="LavaMolecule10" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 823, 515.481 )
+
+[node name="LavaMolecule11" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 780.567, 458 )
+
+[node name="LavaMolecule12" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 791, 464.519 )
+
+[node name="LavaMolecule15" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 833.433, 458 )
+
+[node name="LavaMolecule16" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 458 )
+
+[node name="LavaMolecule17" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 855, 439.037 )
+
+[node name="LavaMolecule18" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 780.567, 458 )
+
+[node name="LavaMolecule19" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 791, 464.519 )
+
+[node name="LavaMolecule20" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 833.433, 458 )
+
+[node name="LavaMolecule21" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 807, 458 )
+
+[node name="LavaMolecule22" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 855, 439.037 )
+
+[node name="LavaMolecule23" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 780.567, 458 )
+
+[node name="LavaMolecule24" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 791, 464.519 )
+
+[node name="LavaMolecule13" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 775, 515.481 )
+
+[node name="LavaMolecule14" parent="LavaLayer" instance=ExtResource( 16 )]
+position = Vector2( 839, 490 )
+
+[node name="StoneLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterViewport" type="ViewportContainer" parent="."]
+material = ExtResource( 5 )
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="WaterViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="LavaViewport" type="ViewportContainer" parent="."]
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="LavaViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StoneViewport" type="ViewportContainer" parent="."]
+material = SubResource( 4 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Viewport" type="Viewport" parent="StoneViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Area2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( 832.294, 790 )
+scale = Vector2( 0.663215, 1.47753 )
+
+[node name="Wall2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 935, 570 )
+scale = Vector2( 1, 1.74 )
+
+[node name="Wall4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 727, 573.481 )
+scale = Vector2( 1, 1.74 )
+
+[node name="Wall7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 631, 210 )
+rotation = -0.785398
+scale = Vector2( 1, 0.9 )
+
+[node name="Wall11" parent="." instance=ExtResource( 13 )]
+position = Vector2( 695, 98 )
+rotation = -0.785398
+scale = Vector2( 1, 0.9 )
+
+[node name="Wall8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1031, 210 )
+rotation = 0.785398
+scale = Vector2( 1, 0.9 )
+
+[node name="Wall10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 967, 98 )
+rotation = 0.785398
+scale = Vector2( 1, 0.9 )
+
+[node name="Wall3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 872, 834 )
+rotation = 1.5708
+scale = Vector2( 1, 0.472002 )
+
+[node name="Wall5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 831.689, 193 )
+rotation = 1.5708
+scale = Vector2( 0.999992, 0.308455 )
+
+[node name="Coin" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin20" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin21" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin22" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin23" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin24" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin25" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin26" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin27" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin28" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin29" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin30" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin31" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin32" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin33" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin34" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin35" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin36" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Coin37" parent="." instance=ExtResource( 9 )]
+position = Vector2( 647, 154 )
+rotation = -0.785398
+physics_material_override = SubResource( 5 )
+
+[node name="Pin" type="KinematicBody2D" parent="."]
+position = Vector2( 623.681, 316.344 )
+rotation = -0.785398
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 220
+
+[node name="Area2D" type="Area2D" parent="Pin"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin/Area2D"]
+shape = SubResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Pin/Area2D"]
+position = Vector2( 164.631, 0 )
+scale = Vector2( 0.727236, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin"]
+position = Vector2( 162.37, -0.762695 )
+shape = SubResource( 7 )
+
+[node name="Pin2" type="KinematicBody2D" parent="."]
+position = Vector2( 1055, 315.169 )
+rotation = 3.92699
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 220
+
+[node name="Area2D" type="Area2D" parent="Pin2"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin2/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin2/Area2D"]
+shape = SubResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Pin2/Area2D"]
+position = Vector2( 164.526, 0 )
+scale = Vector2( 0.726575, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin2"]
+position = Vector2( 163.366, -0.000183105 )
+shape = SubResource( 7 )
+
+[node name="Pin3" type="KinematicBody2D" parent="."]
+position = Vector2( 1112, 600 )
+rotation = 3.07527
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 350
+
+[node name="Area2D" type="Area2D" parent="Pin3"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin3/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3/Area2D"]
+shape = SubResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Pin3/Area2D"]
+position = Vector2( 292.5, 0 )
+scale = Vector2( 1.53145, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3"]
+position = Vector2( 248.276, 0 )
+shape = SubResource( 8 )
+
+[node name="Pin4" type="KinematicBody2D" parent="."]
+position = Vector2( 647, 834 )
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 70
+
+[node name="Area2D" type="Area2D" parent="Pin4"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin4/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4/Area2D"]
+shape = SubResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Pin4/Area2D"]
+position = Vector2( 100.5, 0 )
+scale = Vector2( 0.323901, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4"]
+position = Vector2( 96, 0 )
+shape = SubResource( 9 )
+
+[node name="CoinDestroyer" parent="." instance=ExtResource( 14 )]
+position = Vector2( 896, 927 )
+scale = Vector2( 8.44001, 2 )
+
+[node name="BG" parent="." instance=ExtResource( 15 )]
+
+[node name="Title" type="Label" parent="."]
+margin_left = 991.0
+margin_top = 766.157
+margin_right = 1555.0
+margin_bottom = 834.157
+custom_colors/font_color = Color( 0.964706, 0.882353, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Don't lose the coins!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" parent="." instance=ExtResource( 17 )]
+
+[connection signal="input_event" from="Pin/Area2D" to="Pin" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin2/Area2D" to="Pin2" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin3/Area2D" to="Pin3" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin4/Area2D" to="Pin4" method="_on_Area2D_input_event"]

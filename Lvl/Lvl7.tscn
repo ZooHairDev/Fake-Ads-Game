@@ -1,0 +1,447 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Water.shader" type="Shader" id=1]
+[ext_resource path="res://Scripts/Lvl7.gd" type="Script" id=2]
+[ext_resource path="res://Pin.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/font_lvl_titles.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Materials/Water_Material.tres" type="Material" id=5]
+[ext_resource path="res://pin_head.png" type="Texture" id=6]
+[ext_resource path="res://pin_body.png" type="Texture" id=7]
+[ext_resource path="res://oxygen_preset.tres" type="Texture" id=8]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=10]
+[ext_resource path="res://BG.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/OxygenMolecule.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/SpeedRunCounter.tscn" type="PackedScene" id=13]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/blobby = true
+shader_param/color_ramp = ExtResource( 8 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 75.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 140.217, 12.1497 )
+
+[node name="World" type="Node2D" groups=["oxygen lvl"]]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 9 )]
+position = Vector2( 459.88, 234.459 )
+
+[node name="WaterLayer" type="CanvasLayer" parent="."]
+
+[node name="OxygenLayer" type="CanvasLayer" parent="."]
+
+[node name="OxygenMolecule" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule2" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule3" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule4" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule5" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule6" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1148, 751 )
+
+[node name="OxygenMolecule7" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1068, 714.481 )
+
+[node name="OxygenMolecule8" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1052.28, 687 )
+
+[node name="OxygenMolecule9" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 639 )
+
+[node name="OxygenMolecule10" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 631 )
+
+[node name="OxygenMolecule11" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1044, 647 )
+
+[node name="OxygenMolecule12" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 703 )
+
+[node name="OxygenMolecule13" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1092, 703 )
+
+[node name="OxygenMolecule14" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1116, 663 )
+
+[node name="OxygenMolecule15" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule16" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule17" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule18" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule19" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule20" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule21" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule22" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule23" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule24" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule25" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule26" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule27" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule28" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule29" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule30" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule31" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule32" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule33" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule34" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1148, 751 )
+
+[node name="OxygenMolecule35" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1068, 714.481 )
+
+[node name="OxygenMolecule36" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1052.28, 687 )
+
+[node name="OxygenMolecule37" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 639 )
+
+[node name="OxygenMolecule38" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 631 )
+
+[node name="OxygenMolecule39" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1044, 647 )
+
+[node name="OxygenMolecule40" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 703 )
+
+[node name="OxygenMolecule41" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1092, 703 )
+
+[node name="OxygenMolecule42" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1116, 663 )
+
+[node name="OxygenMolecule43" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule44" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule45" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule46" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule47" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule48" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule49" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule50" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule51" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule52" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule53" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule54" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule55" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule56" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule57" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule58" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule59" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule60" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule61" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 671 )
+
+[node name="OxygenMolecule62" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1148, 751 )
+
+[node name="OxygenMolecule63" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1068, 714.481 )
+
+[node name="OxygenMolecule64" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1052.28, 687 )
+
+[node name="OxygenMolecule65" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 639 )
+
+[node name="OxygenMolecule66" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 631 )
+
+[node name="OxygenMolecule67" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1044, 647 )
+
+[node name="OxygenMolecule68" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 703 )
+
+[node name="OxygenMolecule69" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1092, 703 )
+
+[node name="OxygenMolecule70" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1116, 663 )
+
+[node name="OxygenMolecule71" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule72" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule73" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule74" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1148, 751 )
+
+[node name="OxygenMolecule75" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1068, 714.481 )
+
+[node name="OxygenMolecule76" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1052.28, 687 )
+
+[node name="OxygenMolecule77" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1084, 639 )
+
+[node name="OxygenMolecule78" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 631 )
+
+[node name="OxygenMolecule79" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1044, 647 )
+
+[node name="OxygenMolecule80" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1108, 703 )
+
+[node name="OxygenMolecule81" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1092, 703 )
+
+[node name="OxygenMolecule82" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1116, 663 )
+
+[node name="OxygenMolecule83" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule84" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="OxygenMolecule85" parent="OxygenLayer" instance=ExtResource( 12 )]
+position = Vector2( 1124, 687 )
+
+[node name="WaterViewport" type="ViewportContainer" parent="."]
+material = ExtResource( 5 )
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="WaterViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="OxygenViewport" type="ViewportContainer" parent="."]
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="OxygenViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Wall4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 997, 613 )
+scale = Vector2( 1, 1.048 )
+
+[node name="Wall6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1189, 603.333 )
+scale = Vector2( 1, 1.22 )
+
+[node name="Wall10" parent="." instance=ExtResource( 10 )]
+position = Vector2( 409.715, 301.628 )
+rotation = 1.5708
+scale = Vector2( 1, 0.649276 )
+
+[node name="Wall14" parent="." instance=ExtResource( 10 )]
+position = Vector2( 461.336, 120.649 )
+rotation = 1.5708
+
+[node name="Wall12" parent="." instance=ExtResource( 10 )]
+position = Vector2( 316.422, 213.037 )
+scale = Vector2( 1, 0.639998 )
+
+[node name="Wall13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 606.189, 173.649 )
+scale = Vector2( 1, 0.4 )
+
+[node name="Wall3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1091, 783 )
+rotation = 1.5708
+scale = Vector2( 1, 0.672004 )
+
+[node name="Wall8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 898.241, 322.977 )
+rotation = -1.26198
+scale = Vector2( 1, 2.011 )
+
+[node name="Wall9" parent="." instance=ExtResource( 10 )]
+position = Vector2( 755.871, 382.065 )
+rotation = -1.26198
+scale = Vector2( 1, 1.685 )
+
+[node name="Pin3" type="KinematicBody2D" parent="."]
+position = Vector2( 606.189, 432.526 )
+rotation = -1.5708
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 270
+
+[node name="Area2D" type="Area2D" parent="Pin3"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin3/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Pin3/Area2D"]
+position = Vector2( 187.495, 0 )
+scale = Vector2( 0.871039, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3"]
+position = Vector2( 184.767, 0 )
+shape = SubResource( 3 )
+
+[node name="Pin4" type="KinematicBody2D" parent="."]
+position = Vector2( 1276.86, 473.009 )
+rotation = -3.10422
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 300
+
+[node name="Area2D" type="Area2D" parent="Pin4"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin4/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Pin4/Area2D"]
+position = Vector2( 187.495, 0 )
+scale = Vector2( 0.871039, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4"]
+position = Vector2( 184.767, 0 )
+shape = SubResource( 3 )
+
+[node name="BG" parent="." instance=ExtResource( 11 )]
+
+[node name="Title" type="Label" parent="."]
+margin_left = 1088.0
+margin_top = 176.459
+margin_right = 1529.0
+margin_bottom = 244.459
+custom_colors/font_color = Color( 0.964706, 0.882353, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Don't suffocate!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" parent="." instance=ExtResource( 13 )]
+
+[connection signal="input_event" from="Pin3/Area2D" to="Pin3" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin4/Area2D" to="Pin4" method="_on_Area2D_input_event"]
