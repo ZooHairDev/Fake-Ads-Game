@@ -1,0 +1,278 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Water.shader" type="Shader" id=1]
+[ext_resource path="res://Scripts/Test.gd" type="Script" id=2]
+[ext_resource path="res://Pin.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/font_lvl_titles.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Materials/Water_Material.tres" type="Material" id=5]
+[ext_resource path="res://pin_head.png" type="Texture" id=6]
+[ext_resource path="res://pin_body.png" type="Texture" id=7]
+[ext_resource path="res://Lava_preset.tres" type="Texture" id=8]
+[ext_resource path="res://Prefabs/Cointest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Lvl/CoinCounter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=12]
+[ext_resource path="res://BG.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/SpeedRunCounter.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ThisAPin.png" type="Texture" id=15]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = ExtResource( 8 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.261719, 0.261719, 0.261719, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = SubResource( 3 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 69.7756
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 216, 12.1497 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BG" parent="." instance=ExtResource( 13 )]
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 797, 670 )
+
+[node name="ProgressBar" parent="Player" index="3"]
+visible = false
+
+[node name="WaterLayer" type="CanvasLayer" parent="."]
+
+[node name="LavaLayer" type="CanvasLayer" parent="."]
+
+[node name="StoneLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterViewport" type="ViewportContainer" parent="."]
+material = ExtResource( 5 )
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="WaterViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="LavaViewport" type="ViewportContainer" parent="."]
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="LavaViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StoneViewport" type="ViewportContainer" parent="."]
+material = SubResource( 4 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Viewport" type="Viewport" parent="StoneViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Wall5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 943.32, 523 )
+scale = Vector2( 1.5, 1.501 )
+
+[node name="Wall7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 653, 522 )
+scale = Vector2( 1.5, 1.501 )
+
+[node name="Wall6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 789, 741 )
+rotation = -1.57079
+scale = Vector2( 1.5, 0.922 )
+
+[node name="Pin4" type="KinematicBody2D" parent="."]
+position = Vector2( 549, 450.43 )
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 350
+
+[node name="Area2D" type="Area2D" parent="Pin4"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin4/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4/Area2D"]
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Pin4/Area2D"]
+position = Vector2( 256.5, 0 )
+scale = Vector2( 1.30503, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4"]
+position = Vector2( 248.276, 0 )
+shape = SubResource( 6 )
+
+[node name="WaterMolecule73" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule74" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule75" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule76" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule77" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule78" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule79" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule80" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule81" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule82" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule83" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule84" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule85" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule86" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule87" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule88" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule89" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule90" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule91" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule92" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule93" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule94" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule95" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule96" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule97" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule98" parent="." instance=ExtResource( 9 )]
+position = Vector2( 795.809, 375.078 )
+
+[node name="WaterMolecule99" parent="." instance=ExtResource( 9 )]
+position = Vector2( 779.703, 330.129 )
+
+[node name="WaterMolecule100" parent="." instance=ExtResource( 9 )]
+position = Vector2( 815.669, 326.008 )
+
+[node name="WaterMolecule101" parent="." instance=ExtResource( 9 )]
+position = Vector2( 815.669, 375.078 )
+
+[node name="WaterMolecule102" parent="." instance=ExtResource( 9 )]
+position = Vector2( 774.07, 375.078 )
+
+[node name="WaterMolecule103" parent="." instance=ExtResource( 9 )]
+position = Vector2( 797.276, 341.366 )
+
+[node name="WaterMolecule104" parent="." instance=ExtResource( 9 )]
+position = Vector2( 784, 352.603 )
+
+[node name="WaterMolecule105" parent="." instance=ExtResource( 9 )]
+position = Vector2( 815.669, 352.603 )
+
+[node name="Area2D" parent="." instance=ExtResource( 11 )]
+position = Vector2( 797, 718 )
+scale = Vector2( 0.94322, 2.35753 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1152.0
+margin_top = 768.0
+margin_right = 1536.0
+margin_bottom = 836.0
+custom_colors/font_color = Color( 0.964706, 0.882353, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Get the coins!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" parent="." instance=ExtResource( 14 )]
+
+[node name="ThisAPin" type="Sprite" parent="."]
+position = Vector2( 320, 668.81 )
+rotation = -0.731201
+texture = ExtResource( 15 )
+
+[connection signal="input_event" from="Pin4/Area2D" to="Pin4" method="_on_Area2D_input_event"]
+
+[editable path="Player"]

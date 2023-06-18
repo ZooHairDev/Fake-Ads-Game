@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://coin.png" type="Texture" id=2]
+[ext_resource path="res://WaterMolecule.gd" type="Script" id=5]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 8.0
+
+[node name="Coin" type="RigidBody2D" groups=[
+"coin",
+]]
+light_mask = 2
+mass = 1.53061
+physics_material_override = SubResource( 1 )
+gravity_scale = 3.0
+contacts_reported = 1
+contact_monitor = true
+can_sleep = false
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.28782, 0.277458 )
+z_index = -1
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_WaterMolecule_body_entered"]

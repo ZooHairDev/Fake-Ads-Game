@@ -1,0 +1,449 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Water.shader" type="Shader" id=1]
+[ext_resource path="res://Scripts/Lvl3.gd" type="Script" id=2]
+[ext_resource path="res://Pin.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/font_lvl_titles.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Materials/Water_Material.tres" type="Material" id=5]
+[ext_resource path="res://pin_head.png" type="Texture" id=6]
+[ext_resource path="res://pin_body.png" type="Texture" id=7]
+[ext_resource path="res://Lava_preset.tres" type="Texture" id=8]
+[ext_resource path="res://Prefabs/Cointest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/WaterMolecule.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Lvl/CoinCounter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=13]
+[ext_resource path="res://BG.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/LavaMolecule.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/SpeedRunCounter.tscn" type="PackedScene" id=16]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = ExtResource( 8 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.261719, 0.261719, 0.261719, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/blobby = false
+shader_param/color_ramp = SubResource( 3 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 69.7756
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 216, 12.5749 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 163.862, 12.5749 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 10 )]
+position = Vector2( 781, 680 )
+
+[node name="WaterLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterMolecule237" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule239" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule241" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule243" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule245" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule247" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule249" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule251" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule253" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule255" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule257" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule259" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule248" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule250" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule252" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule254" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule256" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="WaterMolecule258" parent="WaterLayer" instance=ExtResource( 11 )]
+position = Vector2( 1213, 248 )
+
+[node name="LavaLayer" type="CanvasLayer" parent="."]
+
+[node name="LavaMolecule" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule2" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule3" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule4" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule5" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule6" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule7" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule8" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule9" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule10" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule11" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule12" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule13" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule14" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule15" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule16" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule17" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="LavaMolecule18" parent="LavaLayer" instance=ExtResource( 15 )]
+position = Vector2( 779, 398 )
+
+[node name="StoneLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterViewport" type="ViewportContainer" parent="."]
+material = ExtResource( 5 )
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="WaterViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="LavaViewport" type="ViewportContainer" parent="."]
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="LavaViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StoneViewport" type="ViewportContainer" parent="."]
+material = SubResource( 4 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Viewport" type="Viewport" parent="StoneViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Wall5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 927.32, 628 )
+scale = Vector2( 1.5, 0.9 )
+
+[node name="Wall8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1195, 349 )
+rotation = -2.0944
+scale = Vector2( 1.5, 2.053 )
+
+[node name="Wall7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 637, 448 )
+scale = Vector2( 1.5, 2.053 )
+
+[node name="Wall6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 773, 751 )
+rotation = -1.57079
+scale = Vector2( 1.5, 0.922 )
+
+[node name="Pin3" type="KinematicBody2D" parent="."]
+position = Vector2( 467, 324 )
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 350
+
+[node name="Area2D" type="Area2D" parent="Pin3"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin3/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3/Area2D"]
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Pin3/Area2D"]
+position = Vector2( 256.5, 0 )
+scale = Vector2( 1.30503, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin3"]
+position = Vector2( 248.276, -0.425156 )
+shape = SubResource( 6 )
+
+[node name="Pin5" type="KinematicBody2D" parent="."]
+position = Vector2( 927, 172 )
+rotation = 1.5708
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Pin5"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin5/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin5/Area2D"]
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Pin5/Area2D"]
+position = Vector2( 205.494, 0 )
+scale = Vector2( 0.984239, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin5"]
+position = Vector2( 196.138, -0.425171 )
+shape = SubResource( 7 )
+
+[node name="Pin4" type="KinematicBody2D" parent="."]
+position = Vector2( 481, 517 )
+collision_layer = 17
+collision_mask = 17
+input_pickable = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+maxDragDistance = 350
+
+[node name="Area2D" type="Area2D" parent="Pin4"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Pin4/Area2D"]
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4/Area2D"]
+shape = SubResource( 5 )
+
+[node name="Sprite2" type="Sprite" parent="Pin4/Area2D"]
+position = Vector2( 256.5, 0 )
+scale = Vector2( 1.30503, 1 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pin4"]
+position = Vector2( 248.276, 0 )
+shape = SubResource( 6 )
+
+[node name="WaterMolecule73" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule74" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule75" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule76" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule77" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule78" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule79" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule80" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule81" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule82" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule83" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule84" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule85" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule86" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule87" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule88" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule89" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule90" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule91" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule92" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule93" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule94" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule95" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule96" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule97" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule98" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule99" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule100" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule101" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759, 248 )
+
+[node name="WaterMolecule102" parent="." instance=ExtResource( 9 )]
+position = Vector2( 763, 212 )
+
+[node name="WaterMolecule103" parent="." instance=ExtResource( 9 )]
+position = Vector2( 745, 192 )
+
+[node name="WaterMolecule104" parent="." instance=ExtResource( 9 )]
+position = Vector2( 735, 246 )
+
+[node name="WaterMolecule105" parent="." instance=ExtResource( 9 )]
+position = Vector2( 765, 184 )
+
+[node name="Area2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( 781, 695 )
+scale = Vector2( 0.943, 4.5 )
+
+[node name="BG" parent="." instance=ExtResource( 14 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1152.0
+margin_top = 768.0
+margin_right = 1536.0
+margin_bottom = 836.0
+custom_colors/font_color = Color( 0.964706, 0.882353, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Get the coins!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" parent="." instance=ExtResource( 16 )]
+
+[connection signal="input_event" from="Pin3/Area2D" to="Pin3" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin5/Area2D" to="Pin5" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Pin4/Area2D" to="Pin4" method="_on_Area2D_input_event"]

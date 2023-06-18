@@ -1,0 +1,541 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Prefabs/WaterMolecule.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Test.gd" type="Script" id=4]
+[ext_resource path="res://Materials/Water_Material.tres" type="Material" id=5]
+[ext_resource path="res://Lava_preset.tres" type="Texture" id=6]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/LavaMolecule.tscn" type="PackedScene" id=8]
+[ext_resource path="res://gas_preset.tres" type="Texture" id=9]
+[ext_resource path="res://Water.shader" type="Shader" id=10]
+[ext_resource path="res://Prefabs/GasMolecule.tscn" type="PackedScene" id=11]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+bounce = 0.1
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 10 )
+shader_param/blobby = true
+shader_param/color_ramp = ExtResource( 9 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 10 )
+shader_param/blobby = false
+shader_param/color_ramp = ExtResource( 6 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.261719, 0.261719, 0.261719, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 10 )
+shader_param/blobby = false
+shader_param/color_ramp = SubResource( 5 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1042.32, 416 )
+
+[node name="WaterLayer" type="CanvasLayer" parent="."]
+
+[node name="WaterMolecule236" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule237" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule238" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule239" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule240" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule241" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule242" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule243" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule244" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule245" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule246" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule247" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule248" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 848, 264 )
+
+[node name="WaterMolecule249" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule250" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 853.6, 248 )
+
+[node name="WaterMolecule251" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule252" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 853.6, 288 )
+
+[node name="WaterMolecule253" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule254" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 824, 257.256 )
+
+[node name="WaterMolecule255" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule256" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 816, 257.256 )
+
+[node name="WaterMolecule257" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="WaterMolecule258" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 816, 272 )
+
+[node name="WaterMolecule259" parent="WaterLayer" instance=ExtResource( 1 )]
+position = Vector2( 885.6, 289.256 )
+
+[node name="LavaLayer" type="CanvasLayer" parent="."]
+
+[node name="LavaMolecule" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule2" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule3" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule4" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule5" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule6" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule7" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule8" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule9" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule10" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 185.481 )
+
+[node name="LavaMolecule11" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1253.49, 185.481 )
+
+[node name="LavaMolecule12" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1247.89, 162.56 )
+
+[node name="LavaMolecule13" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1207.89, 193.481 )
+
+[node name="LavaMolecule14" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1253.49, 202.962 )
+
+[node name="LavaMolecule15" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1231.89, 152 )
+
+[node name="LavaMolecule16" parent="LavaLayer" instance=ExtResource( 8 )]
+position = Vector2( 1200, 177.481 )
+
+[node name="StoneLayer" type="CanvasLayer" parent="."]
+
+[node name="GasLayer" type="CanvasLayer" parent="."]
+
+[node name="OxygenMolecule" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 991.105, 808.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule2" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 991.105, 808.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule3" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 991.105, 808.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule4" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 991.105, 808.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule5" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 991.105, 808.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule6" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1039.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule7" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1039.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule8" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1039.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule9" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1039.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule10" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1039.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule11" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1124.85, 791.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule12" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1124.85, 791.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule13" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1124.85, 791.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule14" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1124.85, 791.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule15" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1124.85, 791.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule16" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1092.57, 807.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule17" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1092.57, 807.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule18" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1092.57, 807.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule19" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1092.57, 807.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule20" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1092.57, 807.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule21" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1015.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule22" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1015.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule23" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1015.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule24" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1015.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule25" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1015.11, 816.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule26" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1063.11, 824.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule27" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1063.11, 824.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule28" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1063.11, 824.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule29" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1063.11, 824.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule30" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1063.11, 824.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule41" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1007.11, 776.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule42" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1007.11, 776.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule43" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1007.11, 776.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule44" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1007.11, 776.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule45" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1007.11, 776.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule46" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1055.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule47" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1055.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule48" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1055.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule49" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1055.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule50" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1055.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule51" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1031.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule52" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1031.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule53" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1031.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule54" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1031.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule55" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1031.11, 784.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule56" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1079.11, 792.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule57" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1079.11, 792.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule58" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1079.11, 792.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule59" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1079.11, 792.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule60" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1079.11, 792.706 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule31" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1148.85, 799.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule32" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1148.85, 799.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule33" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1148.85, 799.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule34" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1148.85, 799.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule35" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1148.85, 799.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule36" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1116.57, 815.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule37" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1116.57, 815.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule38" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1116.57, 815.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule39" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1116.57, 815.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule40" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1116.57, 815.559 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule61" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1174.13, 783.732 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule62" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1174.13, 783.732 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule63" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1174.13, 783.732 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule64" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1174.13, 783.732 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule65" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1144.16, 785.23 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule66" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1142.69, 776 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule67" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1142.69, 776 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule68" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1142.69, 776 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule69" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 1175.65, 818.702 )
+physics_material_override = SubResource( 1 )
+
+[node name="OxygenMolecule70" parent="GasLayer" instance=ExtResource( 11 )]
+position = Vector2( 956.149, 820.2 )
+physics_material_override = SubResource( 1 )
+
+[node name="GasViewport" type="ViewportContainer" parent="."]
+material = SubResource( 2 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="GasViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="WaterViewport" type="ViewportContainer" parent="."]
+material = ExtResource( 5 )
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="WaterViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="LavaViewport" type="ViewportContainer" parent="."]
+material = SubResource( 3 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="LavaViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StoneViewport" type="ViewportContainer" parent="."]
+material = SubResource( 6 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+mouse_filter = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Viewport" type="Viewport" parent="StoneViewport"]
+size = Vector2( 1920, 1080 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Wall4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 688, 336.694 )
+scale = Vector2( 1.5, 1.133 )
+
+[node name="Wall5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 944, 336.694 )
+scale = Vector2( 1.5, 1.133 )
+
+[node name="Wall6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 816, 520.694 )
+rotation = -1.57079
+scale = Vector2( 1.5, 0.922 )
+
+[node name="Pin" parent="." instance=ExtResource( 3 )]
+position = Vector2( 792, 392 )
